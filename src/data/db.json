@@ -26,7 +26,7 @@
     },
     {
         "title": "String - IndexOf",
-        "content": "La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.",
+        "content": "La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.",
         "created_at": "08/03/2024",
         "id": 9
     },
