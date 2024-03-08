@@ -10,6 +10,7 @@ export function App() {
 
   async function getNotes() {
     const data = await NotesApi.fetchAllNotes();
+    data.sort((a, b) => a.title.localeCompare(b.title))
     dispatch(setNoteList(data));
   }
   
@@ -18,8 +19,8 @@ export function App() {
    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return <div>
+  return <>
       <Header />
       <Outlet />
-    </div>;
+    </>;
 }

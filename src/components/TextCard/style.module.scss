@@ -1,0 +1,42 @@
+.container {
+    cursor: pointer;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.4s;
+    width: 300px;
+    margin: 10px;
+    height: 300px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            transition: all 0.4s;
+            margin-bottom: 0;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        &__icon {
+            transition: all 0.4s;
+        }
+    }
+
+    &__time {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: inline-block;
+        color: #b8b8b8;
+    }
+
+    &__content {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+}
