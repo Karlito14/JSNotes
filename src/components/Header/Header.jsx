@@ -6,15 +6,15 @@ import { useNavigate } from 'react-router-dom';
 export const Header = () => {
     const navigate = useNavigate();
     return (
-        <header className={`${style.header} row`}>
-            <div className='col-xs-12 col-sm-4'>
+        <header className={style.header}>
+            <div className={style.header__logo}>
                 <Logo 
                     onClick={() => navigate('/')}
                     title={'JS Notes'} 
                     subtitle={'Enregistre tes méthodes JS'} 
                 />
             </div>
-            <div className='col-xs-12 col-sm-8 text-end'>
+            <div >
                 <ButtonPrimary 
                     text={'Ajoute une méthode +'}
                     onClick={() => navigate('/note/new')}

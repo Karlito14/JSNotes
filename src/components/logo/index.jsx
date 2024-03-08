@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import s from "./style.module.scss";
 import image from 'assets/images/logo.png';
 
