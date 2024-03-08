@@ -4,6 +4,7 @@ import { ButtonPrimary } from 'components/ButtonPrimary/ButtonPrimary';
 import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
+
     const navigate = useNavigate();
     return (
         <header className={style.header}>
@@ -16,7 +17,7 @@ export const Header = () => {
             </div>
             <div >
                 <ButtonPrimary 
-                    text={'Ajoute une méthode +'}
+                    text={'Ajouter une méthode +'}
                     onClick={() => navigate('/note/new')}
                 />
             </div>
