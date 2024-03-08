@@ -1,19 +1,21 @@
 import "./index.scss";
-import ReactDOM from "react-dom/client";
+/*********************** Redux ***********************/
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { App } from "App";
-import { StrictMode } from "react";
+/*********************** React ***********************/
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+/*********************** Pages du site ***********************/
 import { NoteBrowse } from "pages/NoteBrowse/NoteBrowse";
 import { PageNotFound } from "pages/PageNotFound/PageNotFound";
 import { Note } from "pages/Note/Note";
 import { NoteCreate } from "pages/NoteCreate/NoteCreate";
+/*********************** Composant ***********************/
+import { App } from "App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
@@ -26,5 +28,4 @@ root.render(
         </Routes>
       </BrowserRouter>
     </Provider>
-  </StrictMode>
 );
