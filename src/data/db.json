@@ -35,6 +35,12 @@
       "content": "La méthode toUpperCase() retourne la valeur de la chaîne courante, convertie en majuscules.",
       "created_at": "08/03/2024",
       "id": "10"
+    },
+    {
+      "id": "a522",
+      "title": "String - startsWith",
+      "content": "La méthode startsWith() renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.",
+      "created_at": "09/03/2024"
     }
   ]
 }
