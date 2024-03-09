@@ -1,14 +1,9 @@
 import { PencilFill, TrashFill } from 'react-bootstrap-icons';
 import style from './style.module.scss';
 import { ButtonPrimary } from 'components/ButtonPrimary/ButtonPrimary';
-import { useState } from 'react';
+import { ValidityForm } from './validityForm';
 
 export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
-    const [formValues, setFormValues] = useState({title: '', content: ''});
-
-    function updateFormValues(event) {
-        setFormValues({...formValues, [event.target.name] : event.target.value})
-    }
 
     const actionIcons = (
         <div className={style.divIcons}>
@@ -21,7 +16,6 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
         <div className={style.divForm}>
             <label htmlFor='title' className={style.divForm__labelTitle}>Titre</label>
             <input 
-                onInput={updateFormValues}
                 autoComplete='off' 
                 autoFocus 
                 id='title' 
@@ -36,7 +30,6 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
         <div className={style.divForm}>
             <label htmlFor='content' className={style.divForm__labelContent}>Contenu</label>
             <textarea 
-                onInput={updateFormValues}
                 name="content" 
                 id="content" 
                 className={style.divForm__textarea} 
@@ -45,29 +38,44 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
         </div>
     );
 
-    const sendObject = () => {
-        const form = document.querySelector('#form')
-        const formData = new FormData(form);
+    const submitForm = () => {
+        const form = document.querySelector('#form');
+        const title = form.querySelector('#title');
+        const content = form.querySelector('#content');
 
-        const date = new Date()
-        const day = date.getDate()
-        let month = date.getMonth();
-        month = month.length === 1 ? '0' + month : month;
-        const year = date.getFullYear(); 
+        let formOk = true;
 
-        return {
-            title: formData.get('title'),
-            content: formData.get('content'),
-            created_at: `${day}/${month}/${year}`,
+        try {
+            ValidityForm.checkInputText(title);
+            ValidityForm.displayError(title, '');
+        } catch (error) {
+            ValidityForm.displayError(title, error.message);
+            formOk = false;
         }
+
+        try {
+            ValidityForm.checkTextArea(content);
+            ValidityForm.displayError(content, '');
+        } catch (error) {
+            ValidityForm.displayError(content, error.message);
+            formOk = false;
+        }
+
+        const date = new Date().toLocaleDateString()
+
+        if(formOk) {
+            onClickSubmit({
+                title: title.value.trim(),
+                content: content.value.trim(),
+                created_at: date,
+            })
+        }
+        
    }
 
     const submitButton = (
         <div className={style.divButton}>
-            <ButtonPrimary text={'Enregistrer'} onClick={() => {
-                const method = sendObject();
-                onClickSubmit(method);
-            }} />
+            <ButtonPrimary text={'Enregistrer'} onClick={submitForm} />
         </div>
     );
     
