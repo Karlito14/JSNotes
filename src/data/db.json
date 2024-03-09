@@ -1,40 +1,40 @@
 {
   "notes": [
     {
-        "title": "Array - Includes",
-        "content": "La méthode includes() permet de déterminer si un tableau contient une valeur et renvoie true si c'est le cas, false sinon.",
-        "created_at": "08/03/2024",
-        "id": 2
+      "title": "Array - Includes",
+      "content": "La méthode includes() permet de déterminer si un tableau contient une valeur et renvoie true si c'est le cas, false sinon.",
+      "created_at": "08/03/2024",
+      "id": "2"
     },
     {
-        "title": "Array - Join",
-        "content": "La méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau. \nLa concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.",
-        "created_at": "08/03/2024",
-        "id": 4
+      "title": "Array - Join",
+      "content": "La méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau. \nLa concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.",
+      "created_at": "08/03/2024",
+      "id": "4"
     },
     {
-        "title": "Array - Push",
-        "content": "La méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.",
-        "created_at": "08/03/2024",
-        "id": 5
+      "title": "Array - Push",
+      "content": "La méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.",
+      "created_at": "08/03/2024",
+      "id": "5"
     },
     {
-        "title": "String - Concat",
-        "content": "La méthode concat() combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.",
-        "created_at": "08/03/2024",
-        "id": 7
+      "title": "String - Concat",
+      "content": "La méthode concat() combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.",
+      "created_at": "08/03/2024",
+      "id": "7"
     },
     {
-        "title": "String - IndexOf",
-        "content": "La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.",
-        "created_at": "08/03/2024",
-        "id": 9
+      "title": "String - IndexOf",
+      "content": "La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.",
+      "created_at": "08/03/2024",
+      "id": "9"
     },
     {
-        "title": "String - ToUpperCase",
-        "content": "La méthode toUpperCase() retourne la valeur de la chaîne courante, convertie en majuscules.",
-        "created_at": "08/03/2024",
-        "id": 10
+      "title": "String - ToUpperCase",
+      "content": "La méthode toUpperCase() retourne la valeur de la chaîne courante, convertie en majuscules.",
+      "created_at": "08/03/2024",
+      "id": "10"
     }
   ]
 }

@@ -1,0 +1,58 @@
+.section {
+    background-color: white;
+    padding: 50px;
+    border-radius: 22px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+}
+
+
+
+.divIcons {
+
+    &__icon {
+        cursor: pointer;
+
+        &:nth-child(1) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.divForm {
+    display: flex;
+    flex-direction: column;
+
+    &__labelTitle, &__labelContent  {
+        margin-bottom: 10px;
+    }
+    
+
+    &__inputTitle {
+        width: 50%;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        border: none; 
+        border:solid 2px #b8b8b8;
+    }
+
+    &__textarea {
+        margin-bottom: 20px;
+        resize: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border:solid 2px #b8b8b8;
+    }
+}
+
+.divButton {
+    text-align: right;
+}
