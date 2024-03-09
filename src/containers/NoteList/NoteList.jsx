@@ -5,11 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 export const NoteList = () => {
     const methodes = useSelector(store => store.notes.noteList);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const methodesSort = [...methodes].sort((a, b) => a.title.localeCompare(b.title))
 
     return (
     <main className={style.main}>
-        {methodes && methodes.map(methode => {
+        {methodes && methodesSort.map(methode => {
             return (
                 <TextCard 
                     key={`${methode.id}-${methode.created_at}`}

@@ -10,7 +10,6 @@ export function App() {
 
   async function getNotes() {
     const data = await NotesApi.fetchAllNotes();
-    data.sort((a, b) => a.title.localeCompare(b.title))
     dispatch(setNoteList(data));
   }
   

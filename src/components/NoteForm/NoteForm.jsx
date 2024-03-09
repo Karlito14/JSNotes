@@ -2,8 +2,45 @@ import { PencilFill, TrashFill } from 'react-bootstrap-icons';
 import style from './style.module.scss';
 import { ButtonPrimary } from 'components/ButtonPrimary/ButtonPrimary';
 import { ValidityForm } from './validityForm';
+import { useNavigate } from 'react-router-dom';
 
 export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
+    const navigate = useNavigate();
+
+    const controlForm = () => {
+        const form = document.querySelector('#form');
+        const title = form.querySelector('#title');
+        const content = form.querySelector('#content');
+        const button = form.querySelector('button')
+
+        let formOk = true;
+
+        try {
+            ValidityForm.checkInputText(title);
+            ValidityForm.displayError(title, '', button);
+        } catch (error) {
+            ValidityForm.displayError(title, error.message, button);
+            formOk = false;
+        }
+
+        try {
+            ValidityForm.checkTextArea(content);
+            ValidityForm.displayError(content, '', button);
+        } catch (error) {
+            ValidityForm.displayError(content, error.message, button);
+            formOk = false;
+        }
+
+        const date = new Date().toLocaleDateString();
+
+        if(formOk) {
+            return {
+                title: title.value.trim(),
+                content: content.value.trim(),
+                created_at: date,
+            }
+        }
+    }
 
     const actionIcons = (
         <div className={style.divIcons}>
@@ -22,6 +59,7 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
                 name='title' 
                 type='text' 
                 className={style.divForm__inputTitle}
+                onChange={controlForm}
             />
         </div>
     );
@@ -34,44 +72,19 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
                 id="content" 
                 className={style.divForm__textarea} 
                 rows='5'
+                onChange={controlForm}
             ></textarea>
         </div>
     );
 
     const submitForm = () => {
-        const form = document.querySelector('#form');
-        const title = form.querySelector('#title');
-        const content = form.querySelector('#content');
+        const method = controlForm()
 
-        let formOk = true;
-
-        try {
-            ValidityForm.checkInputText(title);
-            ValidityForm.displayError(title, '');
-        } catch (error) {
-            ValidityForm.displayError(title, error.message);
-            formOk = false;
-        }
-
-        try {
-            ValidityForm.checkTextArea(content);
-            ValidityForm.displayError(content, '');
-        } catch (error) {
-            ValidityForm.displayError(content, error.message);
-            formOk = false;
-        }
-
-        const date = new Date().toLocaleDateString()
-
-        if(formOk) {
-            onClickSubmit({
-                title: title.value.trim(),
-                content: content.value.trim(),
-                created_at: date,
-            })
-        }
-        
-   }
+        if(method) {
+            onClickSubmit(method);
+            navigate('/');
+        }   
+    }
 
     const submitButton = (
         <div className={style.divButton}>

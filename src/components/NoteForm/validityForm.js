@@ -1,6 +1,6 @@
 export class ValidityForm {
 
-    static displayError(input, message) {
+    static displayError(input, message, button) {
         let errorSpan = document.querySelector(`#error-${input.id}`);
 
         if(!errorSpan) {
@@ -10,8 +10,14 @@ export class ValidityForm {
             errorSpan.style.marginBottom = '10px'
         }
 
-        errorSpan.textContent = message;
-        input.after(errorSpan);
+        if(message) {
+            errorSpan.textContent = message;
+            input.after(errorSpan);
+            button.disabled = true;
+        } else {
+            errorSpan.remove();
+            button.removeAttribute('disabled');
+        }  
     }
     
     static checkInputText(input) {
