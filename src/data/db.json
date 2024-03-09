@@ -41,12 +41,6 @@
       "title": "String - startsWith",
       "content": "La méthode startsWith() renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.",
       "created_at": "09/03/2024"
-    },
-    {
-      "id": "610e",
-      "title": "Array - aaaaaaaaaa",
-      "content": "bbbbbbbbbbb",
-      "created_at": "09/03/2024"
     }
   ]
 }
