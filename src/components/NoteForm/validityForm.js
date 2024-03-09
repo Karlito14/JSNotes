@@ -1,22 +1,20 @@
 export class ValidityForm {
 
-    static displayError(input, message, button) {
+    static displayError(input, message) {
         let errorSpan = document.querySelector(`#error-${input.id}`);
 
         if(!errorSpan) {
             errorSpan = document.createElement('span');
             errorSpan.setAttribute('id', `error-${input.id}`);
-            errorSpan.style.color = 'red';
-            errorSpan.style.marginBottom = '10px'
+            errorSpan.style.color = '#dc3545';
+            errorSpan.style.marginTop = '10px';
         }
 
         if(message) {
             errorSpan.textContent = message;
             input.after(errorSpan);
-            button.disabled = true;
         } else {
             errorSpan.remove();
-            button.removeAttribute('disabled');
         }  
     }
     

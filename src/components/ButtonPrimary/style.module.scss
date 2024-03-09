@@ -12,4 +12,8 @@
     &:hover {
         background-color: darken(#fce100, 5%);
     }
+
+    &:disabled {
+        background-color: lighten(#fce100, 10%);
+    }
 }

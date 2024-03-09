@@ -3,37 +3,39 @@ import style from './style.module.scss';
 import { ButtonPrimary } from 'components/ButtonPrimary/ButtonPrimary';
 import { ValidityForm } from './validityForm';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
+    const [isDisabled, setIsDisabled] = useState(true)
     const navigate = useNavigate();
 
     const controlForm = () => {
         const form = document.querySelector('#form');
         const title = form.querySelector('#title');
         const content = form.querySelector('#content');
-        const button = form.querySelector('button')
 
         let formOk = true;
 
         try {
             ValidityForm.checkInputText(title);
-            ValidityForm.displayError(title, '', button);
+            ValidityForm.displayError(title, '');
         } catch (error) {
-            ValidityForm.displayError(title, error.message, button);
+            ValidityForm.displayError(title, error.message);
             formOk = false;
         }
 
         try {
             ValidityForm.checkTextArea(content);
-            ValidityForm.displayError(content, '', button);
+            ValidityForm.displayError(content, '');
         } catch (error) {
-            ValidityForm.displayError(content, error.message, button);
+            ValidityForm.displayError(content, error.message);
             formOk = false;
         }
 
         const date = new Date().toLocaleDateString();
 
         if(formOk) {
+            setIsDisabled(false);
             return {
                 title: title.value.trim(),
                 content: content.value.trim(),
@@ -78,7 +80,7 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
     );
 
     const submitForm = () => {
-        const method = controlForm()
+        const method = controlForm();
 
         if(method) {
             onClickSubmit(method);
@@ -88,7 +90,7 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
 
     const submitButton = (
         <div className={style.divButton}>
-            <ButtonPrimary text={'Enregistrer'} onClick={submitForm} />
+            <ButtonPrimary text={'Enregistrer'} onClick={submitForm} isDisabled={isDisabled} />
         </div>
     );
     
