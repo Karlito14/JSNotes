@@ -13,6 +13,7 @@ export class NotesApi {
             body: JSON.stringify(note),
         });
         const result = await response.json();
+        console.log(result)
         return result;
     }
 
