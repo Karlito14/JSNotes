@@ -30,6 +30,7 @@
 .divForm {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 
     &__labelTitle, &__labelContent  {
         margin-bottom: 10px;
@@ -38,14 +39,12 @@
 
     &__inputTitle {
         width: 50%;
-        margin-bottom: 20px;
         padding: 10px 15px;
         border: none; 
         border:solid 2px #b8b8b8;
     }
 
     &__textarea {
-        margin-bottom: 20px;
         resize: none;
         padding: 10px 15px;
         border-radius: 5px;
