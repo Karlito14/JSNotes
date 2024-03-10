@@ -4,7 +4,8 @@ JS Notes est une application où j'enregistre les méthodes disponibles en JavaS
 
 ### Objectifs
 
-- Récupérer des notes dans un backend virtuel
+- Récupérer des méthodes dans un backend virtuel
+- Stocker ces méthodes dans le store **Redux**
 - Ajouter des méthodes
 - Supprimer des méthodes
 - Barre de recherche pour trier les méthodes
@@ -20,7 +21,6 @@ JS Notes est une application où j'enregistre les méthodes disponibles en JavaS
 - Un dossier par composant
 - Chaque dossier devra contenir le JSX, le CSS et le JS, si besoin, du composant en question
 - Utilisation de **SASS** pour le CSS
-- Utilisation de **Bootstrap** pour le responsive
 
 ### Tester le projet
 

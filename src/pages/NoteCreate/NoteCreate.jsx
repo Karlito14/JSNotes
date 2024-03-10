@@ -11,7 +11,7 @@ export const NoteCreate = () => {
         dispatch(addNote(methode));
     }
     return (
-        <main className={style.main}>
+        <>
             <NoteForm title={'Enregistrer une méthode'} onClickSubmit={postMethod} />
-        </main>)
+        </>)
 };

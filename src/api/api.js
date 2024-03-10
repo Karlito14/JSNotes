@@ -24,9 +24,10 @@ export class NotesApi {
 
     static async deleteByID(id) {
         const response = await fetch(`${BASE_URL}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
         });
         const result = await response.json();
+        console.log(result)
         return result;
     }
 

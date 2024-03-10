@@ -20,6 +20,8 @@ export function App() {
 
   return <>
       <Header />
-      <Outlet />
+      <main className="main">
+        <Outlet />
+      </main>
     </>;
 }
