@@ -41,6 +41,12 @@
       "title": "String - startsWith",
       "content": "La méthode startsWith() renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.",
       "created_at": "09/03/2024"
+    },
+    {
+      "id": "4771",
+      "title": "Array - find",
+      "content": "La méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée.",
+      "created_at": "09/03/2024"
     }
   ]
 }

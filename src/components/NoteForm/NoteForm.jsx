@@ -5,7 +5,7 @@ import { ValidityForm } from './validityForm';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
+export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash, methodId}) => {
     const [isDisabled, setIsDisabled] = useState(true)
     const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export const NoteForm = ({title, onClickSubmit, onClickEdit, onClickTrash}) => {
     const actionIcons = (
         <div className={style.divIcons}>
             {onClickEdit && <PencilFill onClick={onClickEdit} className={style.divIcons__icon} />}
-            {onClickTrash && <TrashFill onClick={onClickTrash} className={style.divIcons__icon} />}
+            {onClickTrash && <TrashFill onClick={() => onClickTrash(methodId)} className={style.divIcons__icon} />}
         </div>
     );
 

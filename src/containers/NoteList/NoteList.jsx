@@ -7,7 +7,7 @@ export const NoteList = () => {
     const methodes = useSelector(store => store.notes.noteList);
     const navigate = useNavigate();
 
-    const methodesSort = [...methodes].sort((a, b) => a.title.localeCompare(b.title))
+    const methodesSort = [...methodes].sort((a, b) => a.title.localeCompare(b.title));
 
     return (
     <main className={style.main}>
