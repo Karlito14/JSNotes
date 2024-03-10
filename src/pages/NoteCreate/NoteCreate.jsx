@@ -1,4 +1,3 @@
-import style from './style.module.scss';
 import { NoteForm } from 'components/NoteForm/NoteForm';
 import { NotesApi } from 'api/api';
 import { addNote } from 'store/note/note-slice';
