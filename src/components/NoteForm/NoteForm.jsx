@@ -12,6 +12,7 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
 
     const controlForm = (event) => {
         setFormValues({...formValues, [event.target.name]: event.target.value});
+        console.log(formValues)
         const form = document.querySelector('#form');
         const title = form.querySelector('#title');
         const content = form.querySelector('#content');
@@ -43,6 +44,8 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
                 content: content.value.trim(),
                 created_at: date,
             }
+        } else {
+            setIsDisabled(true);
         }
     }
 
@@ -84,12 +87,8 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
     );
 
     const submitForm = () => {
-        const method = controlForm();
-
-        if(method) {
-            onClickSubmit(method);
-            navigate('/');
-        }   
+        onClickSubmit(formValues);
+        navigate('/'); 
     }
 
     const submitButton = (

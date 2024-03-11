@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch src\\data\\db.json -p 3200"
+    "server": "json-server --watch src\\data\\db.json -p 3200",
+    "lint": "eslint ./"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +38,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.0",
     "sass": "^1.71.1"
   }
 }

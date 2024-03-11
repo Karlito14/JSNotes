@@ -25,7 +25,7 @@ export class ValidityForm {
         } else if (value.length < 3) {
             throw new Error('Le contenu doit faire plus de 3 caractères');
         } else if(!value.startsWith('Array') && !value.startsWith('String')) {
-            throw new Error('Veuillez indiquer au début du titre Array ou String selon la méthode')
+            throw new Error('Veuillez indiquer au début du titre Array ou String selon la méthode');
         }
     }
 

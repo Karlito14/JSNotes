@@ -12,5 +12,6 @@ export const NoteCreate = () => {
     return (
         <>
             <NoteForm title={'Enregistrer une méthode'} onClickSubmit={postMethod} />
-        </>)
+        </>
+    )
 };
