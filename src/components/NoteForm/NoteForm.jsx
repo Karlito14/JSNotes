@@ -12,7 +12,7 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
 
     const controlForm = (event) => {
         setFormValues({...formValues, [event.target.name]: event.target.value});
-        console.log(formValues)
+        console.log(formValues);
         const form = document.querySelector('#form');
         const title = form.querySelector('#title');
         const content = form.querySelector('#content');
@@ -43,11 +43,11 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
                 title: title.value.trim(),
                 content: content.value.trim(),
                 created_at: date,
-            }
+            };
         } else {
             setIsDisabled(true);
         }
-    }
+    };
 
     const actionIcons = (
         <div className={style.divIcons}>
@@ -89,7 +89,7 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
     const submitForm = () => {
         onClickSubmit(formValues);
         navigate('/'); 
-    }
+    };
 
     const submitButton = (
         <div className={style.divButton}>
@@ -109,5 +109,5 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
                 {isEditable && submitButton}
             </form>   
         </section>
-    )
-}
+    );
+};

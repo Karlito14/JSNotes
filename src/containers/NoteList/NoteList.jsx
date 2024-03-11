@@ -10,18 +10,18 @@ export const NoteList = () => {
     const methodesSort = [...methodes].sort((a, b) => a.title.localeCompare(b.title));
 
     return (
-    <main className={style.main}>
-        {methodes && methodesSort.map(methode => {
-            return (
-                <TextCard 
-                    key={`${methode.id}-${methode.created_at}`}
-                    title={methode.title} 
-                    subtitle={methode.created_at} 
-                    content={methode.content} 
-                    onClick={() => navigate(`/note/${methode.id}`)}
-                />         
-            )
-        })}
-    </main>
-    )
-}
+        <main className={style.main}>
+            {methodes && methodesSort.map(methode => {
+                return (
+                    <TextCard 
+                        key={`${methode.id}-${methode.created_at}`}
+                        title={methode.title} 
+                        subtitle={methode.created_at} 
+                        content={methode.content} 
+                        onClick={() => navigate(`/note/${methode.id}`)}
+                    />         
+                );
+            })}
+        </main>
+    );
+};

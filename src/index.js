@@ -5,7 +5,6 @@ import { store } from './store';
 /*********************** React ***********************/
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React from 'react';
 /*********************** Pages du site ***********************/
 import { NoteBrowse } from 'pages/NoteBrowse/NoteBrowse';
 import { PageNotFound } from 'pages/PageNotFound/PageNotFound';

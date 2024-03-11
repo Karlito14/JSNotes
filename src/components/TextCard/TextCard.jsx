@@ -47,5 +47,5 @@ export const TextCard = ({ title, subtitle, content, onClick, onClickBin }) => {
             <time className={style.container__time}>{subtitle}</time>
             <p className={style.container__content}>{content}</p>
         </article>
-    )
-}
+    );
+};

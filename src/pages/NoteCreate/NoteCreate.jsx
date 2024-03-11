@@ -4,7 +4,7 @@ import { addNote } from 'store/note/note-slice';
 import { useDispatch } from 'react-redux';
 
 export const NoteCreate = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     async function postMethod(note) {
         const methode = await NotesApi.create(note);
         dispatch(addNote(methode));
@@ -13,5 +13,5 @@ export const NoteCreate = () => {
         <>
             <NoteForm title={'Enregistrer une méthode'} onClickSubmit={postMethod} />
         </>
-    )
+    );
 };
