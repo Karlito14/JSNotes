@@ -47,6 +47,11 @@
       "title": "Array - find",
       "content": "La méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée.",
       "created_at": "09/03/2024"
+    },
+    {
+      "id": "5a21",
+      "title": "Array - bbbbbbb",
+      "content": "cccccccc"
     }
   ]
 }

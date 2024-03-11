@@ -1,4 +1,4 @@
-import { BASE_URL } from "config/config.js";
+import { BASE_URL } from 'config/config.js';
 
 export class NotesApi {
     static async fetchAllNotes() {
@@ -27,7 +27,6 @@ export class NotesApi {
             method: 'DELETE',
         });
         const result = await response.json();
-        console.log(result)
         return result;
     }
 

@@ -1,12 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import style from './style.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { NoteForm } from 'components/NoteForm/NoteForm';
 import { NotesApi } from 'api/api';
-import { deleteNote } from 'store/note/note-slice';
+import { deleteNote, updateNote } from 'store/note/note-slice';
+import { useState } from 'react';
 
 export const Note = () => {
     const { id } = useParams();
+    const [editable, setEditable] = useState(false);
     const store = useSelector(store => store.notes.noteList);
     const methode = store.find(element => element.id === id);
     const dispatch = useDispatch();
@@ -17,15 +18,25 @@ export const Note = () => {
         dispatch(deleteNote(methodDeleted));
         navigate('/');
     }
+
+    async function updateMethod(note) {
+        note.id = methode.id;
+        note.created_at = methode.created_at;
+        const methodeUpdated = await NotesApi.updateNote(note);
+        dispatch(updateNote(methodeUpdated));
+    }
     
     return (
         <>
             {methode && <NoteForm 
-                title={methode.title} 
-                onClickEdit={() => console.log('edit')} 
+                isEditable={editable}
+                title={editable ? 'Modifier une méthode' : methode.title} 
+                onClickEdit={() => setEditable(!editable)} 
                 onClickTrash={deleteMethod}
                 methodId={methode.id}
+                note={methode}
+                onClickSubmit={updateMethod}
             />}
         </>
-    )
+    );
 };
