@@ -10,7 +10,7 @@ export const NoteList = () => {
     const methodesSort = [...methodes].sort((a, b) => a.title.localeCompare(b.title));
 
     return (
-        <main className={style.main}>
+        <section className={style.main}>
             {methodes && methodesSort.map(methode => {
                 return (
                     <TextCard 
@@ -22,6 +22,6 @@ export const NoteList = () => {
                     />         
                 );
             })}
-        </main>
+        </section>
     );
 };

@@ -12,7 +12,6 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
 
     const controlForm = (event) => {
         setFormValues({...formValues, [event.target.name]: event.target.value});
-        console.log(formValues);
         const form = document.querySelector('#form');
         const title = form.querySelector('#title');
         const content = form.querySelector('#content');
@@ -86,14 +85,15 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
         </div>
     );
 
-    const submitForm = () => {
-        onClickSubmit(formValues);
-        navigate('/'); 
-    };
-
     const submitButton = (
         <div className={style.divButton}>
-            <ButtonPrimary text={'Enregistrer'} onClick={submitForm} isDisabled={isDisabled} />
+            <ButtonPrimary 
+                text={'Enregistrer'} 
+                onClick={() => {
+                    onClickSubmit(formValues);
+                    navigate('/'); 
+                }} 
+                isDisabled={isDisabled} />
         </div>
     );
     

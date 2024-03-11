@@ -8,6 +8,10 @@
     margin: 10px;
     height: 300px;
 
+    @media(max-width: 776px) {
+        width: 100%;
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
