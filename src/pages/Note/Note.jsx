@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { NoteForm } from '../../components/NoteForm/NoteForm';
-import { NotesApi } from 'api/api';
-import { deleteNote, updateNote } from 'store/note/note-slice';
+import { NotesApi } from '../../api/api';
+import { deleteNote, updateNote } from '../../store/note/note-slice';
 import { useState } from 'react';
 
 export const Note = () => {
