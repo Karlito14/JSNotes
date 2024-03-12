@@ -24,6 +24,7 @@ export const Note = () => {
         note.created_at = methode.created_at;
         const methodeUpdated = await NotesApi.updateNote(note);
         dispatch(updateNote(methodeUpdated));
+        setEditable(!editable);
     }
     
     return (
@@ -33,7 +34,6 @@ export const Note = () => {
                 title={editable ? 'Modifier une méthode' : methode.title} 
                 onClickEdit={() => setEditable(!editable)} 
                 onClickTrash={deleteMethod}
-                methodId={methode.id}
                 note={methode}
                 onClickSubmit={updateMethod}
             />}
