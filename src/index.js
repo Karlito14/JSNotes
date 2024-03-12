@@ -11,7 +11,7 @@ import { PageNotFound } from './pages/PageNotFound/PageNotFound';
 import { Note } from './pages/Note/Note';
 import { NoteCreate } from './pages/NoteCreate/NoteCreate';
 /*********************** Composant ***********************/
-import { App } from 'App';
+import { App } from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
