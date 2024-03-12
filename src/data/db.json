@@ -1,34 +1,3 @@
 {
-  "notes": [
-    {
-      "id": "24b5",
-      "title": "Array - concat",
-      "content": "La méthode concat() est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération."
-    },
-    {
-      "id": "562f",
-      "title": "Array - every",
-      "content": "La méthode every() permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test."
-    },
-    {
-      "id": "f37a",
-      "title": "Array - filter",
-      "content": "La méthode filter() crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction callback."
-    },
-    {
-      "id": "706f",
-      "title": "Array - find ",
-      "content": "La méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée."
-    },
-    {
-      "id": "63f3",
-      "title": "Array - forEach",
-      "content": "La méthode forEach() permet d'exécuter une fonction donnée sur chaque élément du tableau."
-    },
-    {
-      "id": "8e2f",
-      "title": "Array - indexOf",
-      "content": "La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1."
-    }
-  ]
+  "notes": []
 }

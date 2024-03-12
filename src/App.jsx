@@ -21,7 +21,7 @@ export function App() {
     return (
         <>
             <Header />
-            <main className="main">
+            <main className='main'>
                 <Outlet />
             </main>
         </>

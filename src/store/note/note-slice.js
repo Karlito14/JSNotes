@@ -17,7 +17,6 @@ export const noteSlice = createSlice({
         deleteNote: (currentSlice, action) => {
             const methode = action.payload;
             const indexNote = currentSlice.noteList.findIndex(note => note.id === methode.id);
-            console.log(indexNote);
             currentSlice.noteList.splice(indexNote, 1);
         },
 
