@@ -1,4 +1,4 @@
-import { BASE_URL } from 'config/config.js';
+import { BASE_URL } from '../config/config';
 
 export class NotesApi {
     static async fetchAllNotes() {
