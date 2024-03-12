@@ -6,10 +6,10 @@ import { store } from './store';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 /*********************** Pages du site ***********************/
-import { NoteBrowse } from 'pages/NoteBrowse/NoteBrowse';
-import { PageNotFound } from 'pages/PageNotFound/PageNotFound';
-import { Note } from 'pages/Note/Note';
-import { NoteCreate } from 'pages/NoteCreate/NoteCreate';
+import { NoteBrowse } from './pages/NoteBrowse/NoteBrowse';
+import { PageNotFound } from './pages/PageNotFound/PageNotFound';
+import { Note } from './pages/Note/Note';
+import { NoteCreate } from './pages/NoteCreate/NoteCreate';
 /*********************** Composant ***********************/
 import { App } from 'App';
 
