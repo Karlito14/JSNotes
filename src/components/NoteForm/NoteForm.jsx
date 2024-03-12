@@ -2,13 +2,11 @@ import { PencilFill, TrashFill } from 'react-bootstrap-icons';
 import style from './style.module.scss';
 import { ButtonPrimary } from 'components/ButtonPrimary/ButtonPrimary';
 import { ValidityForm } from './validityForm';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, onClickTrash, methodId, note}) => {
+export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, onClickTrash, note}) => {
     const [isDisabled, setIsDisabled] = useState(true);
     const [formValues, setFormValues] = useState({title: note?.title ?? '', content: note?.content ?? ''});
-    const navigate = useNavigate();
 
     const controlForm = (event) => {
         setFormValues({...formValues, [event.target.name]: event.target.value});
@@ -51,7 +49,7 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
     const actionIcons = (
         <div className={style.divIcons}>
             {onClickEdit && <PencilFill onClick={onClickEdit} className={style.divIcons__icon} />}
-            {onClickTrash && <TrashFill onClick={() => onClickTrash(methodId)} className={style.divIcons__icon} />}
+            {onClickTrash && <TrashFill onClick={() => onClickTrash(note.id)} className={style.divIcons__icon} />}
         </div>
     );
 
@@ -91,7 +89,6 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
                 text={'Enregistrer'} 
                 onClick={() => {
                     onClickSubmit(formValues);
-                    navigate('/'); 
                 }} 
                 isDisabled={isDisabled} />
         </div>

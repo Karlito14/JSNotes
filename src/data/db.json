@@ -1,57 +1,34 @@
 {
   "notes": [
     {
-      "title": "Array - Includes",
-      "content": "La méthode includes() permet de déterminer si un tableau contient une valeur et renvoie true si c'est le cas, false sinon.",
-      "created_at": "08/03/2024",
-      "id": "2"
+      "id": "24b5",
+      "title": "Array - concat",
+      "content": "La méthode concat() est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération."
     },
     {
-      "title": "Array - Join",
-      "content": "La méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau. \nLa concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.",
-      "created_at": "08/03/2024",
-      "id": "4"
+      "id": "562f",
+      "title": "Array - every",
+      "content": "La méthode every() permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test."
     },
     {
-      "title": "Array - Push",
-      "content": "La méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.",
-      "created_at": "08/03/2024",
-      "id": "5"
+      "id": "f37a",
+      "title": "Array - filter",
+      "content": "La méthode filter() crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction callback."
     },
     {
-      "title": "String - Concat",
-      "content": "La méthode concat() combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.",
-      "created_at": "08/03/2024",
-      "id": "7"
+      "id": "706f",
+      "title": "Array - find ",
+      "content": "La méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée."
     },
     {
-      "title": "String - IndexOf",
-      "content": "La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante. Elle renvoie -1 si la valeur cherchée n'est pas trouvée.",
-      "created_at": "08/03/2024",
-      "id": "9"
+      "id": "63f3",
+      "title": "Array - forEach",
+      "content": "La méthode forEach() permet d'exécuter une fonction donnée sur chaque élément du tableau."
     },
     {
-      "title": "String - ToUpperCase",
-      "content": "La méthode toUpperCase() retourne la valeur de la chaîne courante, convertie en majuscules.",
-      "created_at": "08/03/2024",
-      "id": "10"
-    },
-    {
-      "id": "a522",
-      "title": "String - startsWith",
-      "content": "La méthode startsWith() renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.",
-      "created_at": "09/03/2024"
-    },
-    {
-      "id": "4771",
-      "title": "Array - find",
-      "content": "La méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée.",
-      "created_at": "09/03/2024"
-    },
-    {
-      "id": "5a21",
-      "title": "Array - bbbbbbb",
-      "content": "cccccccc"
+      "id": "8e2f",
+      "title": "Array - indexOf",
+      "content": "La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1."
     }
   ]
 }

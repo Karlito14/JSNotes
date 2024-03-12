@@ -1,11 +1,11 @@
-import { createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export const noteSlice = createSlice({
     name: 'notes',
     initialState: {
         noteList: [],
     },
-    reducers : {
+    reducers: {
         setNoteList: (currentSlice, action) => {
             currentSlice.noteList = action.payload;
         },
@@ -15,14 +15,16 @@ export const noteSlice = createSlice({
         },
 
         deleteNote: (currentSlice, action) => {
-            const indexNote = currentSlice.noteList.indexOf(action.payload);
+            const methode = action.payload;
+            const indexNote = currentSlice.noteList.findIndex(note => note.id === methode.id);
+            console.log(indexNote);
             currentSlice.noteList.splice(indexNote, 1);
         },
 
         updateNote: (currentSlice, action) => {
             const methode = action.payload;
-            const indexMethode = currentSlice.noteList.indexOf(methode);
-            currentSlice.noteList.splice(indexMethode, 1, methode);
+            const indexMethode = currentSlice.noteList.findIndex(note => note.id === methode.id);
+            currentSlice.noteList[indexMethode] = methode;
         }
     }
 });

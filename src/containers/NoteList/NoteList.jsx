@@ -1,13 +1,23 @@
 import { TextCard } from 'components/TextCard/TextCard';
 import style from './style.module.scss';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { NotesApi } from 'api/api';
+import { deleteNote } from 'store/note/note-slice';
 
 export const NoteList = () => {
     const methodes = useSelector(store => store.notes.noteList);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const methodesSort = [...methodes].sort((a, b) => a.title.localeCompare(b.title));
+
+    async function deleteMethod(id) {
+        const methodDeleted = await NotesApi.deleteByID(id);
+        console.log(methodDeleted);
+        dispatch(deleteNote(methodDeleted));
+        navigate('/');
+    }
 
     return (
         <section className={style.main}>
@@ -19,6 +29,8 @@ export const NoteList = () => {
                         subtitle={methode.created_at} 
                         content={methode.content} 
                         onClick={() => navigate(`/note/${methode.id}`)}
+                        onClickBin={deleteMethod}
+                        id={methode.id}
                     />         
                 );
             })}
