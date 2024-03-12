@@ -1,6 +1,6 @@
 import { PencilFill, TrashFill } from 'react-bootstrap-icons';
 import style from './style.module.scss';
-import { ButtonPrimary } from 'components/ButtonPrimary/ButtonPrimary';
+import { ButtonPrimary } from '../ButtonPrimary/ButtonPrimary';
 import { ValidityForm } from './validityForm';
 import { useState } from 'react';
 

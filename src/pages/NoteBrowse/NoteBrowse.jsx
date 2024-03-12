@@ -1,5 +1,5 @@
-import { SearchBar } from 'components/SearchBar/SearchBar';
-import { NoteList } from 'containers/NoteList/NoteList';
+import { SearchBar } from '../../components/SearchBar/SearchBar';
+import { NoteList } from '../../containers/NoteList/NoteList';
 import { useState } from 'react';
 
 export const NoteBrowse = () => {

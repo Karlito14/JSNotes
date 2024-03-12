@@ -1,4 +1,4 @@
-# JS Notes
+# [JS Notes]
 
 JS Notes est une application où j'enregistre les méthodes disponibles en JavaScript afin de les consulter rapidement
 
@@ -26,7 +26,7 @@ JS Notes est une application où j'enregistre les méthodes disponibles en JavaS
 
 Pour tester le projet :
 
-Cliquez ici ou :
+Cliquez [ici] ou :
 - Cloner le github
 - Ouvrir votre terminal et taper la commande suivante **npm i** afin d'installer les dépendances utilisées
 - Taper **npm run server** pour lancer le serveur local

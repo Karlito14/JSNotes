@@ -24,6 +24,11 @@
       "id": "a523",
       "title": "String - Repeat",
       "content": "La méthode repeat() construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres."
+    },
+    {
+      "id": "611f",
+      "title": "String - ToLowerCase",
+      "content": "La méthode toLowerCase() retourne la chaîne de caractères courante en minuscules."
     }
   ]
 }

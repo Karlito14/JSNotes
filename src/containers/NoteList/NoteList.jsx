@@ -1,9 +1,9 @@
-import { TextCard } from 'components/TextCard/TextCard';
+import { TextCard } from '../../components/TextCard/TextCard';
 import style from './style.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { NotesApi } from 'api/api';
-import { deleteNote } from 'store/note/note-slice';
+import { NotesApi } from '../../api/api';
+import { deleteNote } from '../../store/note/note-slice';
 
 export const NoteList = ({textValue}) => {
     const methodes = useSelector(store => store.notes.noteList);
