@@ -13,7 +13,7 @@ JS Notes est une application où j'enregistre les méthodes disponibles en JavaS
 
 ### Maquette
 
-
+![Maquette du site en desktop](./maquette/maquette-jsnotes.jpg "Maquette JS Notes")
 
 ### Instructions
 
@@ -29,6 +29,7 @@ Pour tester le projet :
 Cliquez ici ou :
 - Cloner le github
 - Ouvrir votre terminal et taper la commande suivante **npm i** afin d'installer les dépendances utilisées
+- Taper **npm run server** pour lancer le serveur local
 - Taper **npm run start** pour lancer le projet et le visualiser
 
 

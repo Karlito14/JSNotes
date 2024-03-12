@@ -1,3 +1,29 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "id": "edb7",
+      "title": "Array - Concat",
+      "content": "La méthode concat() est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération."
+    },
+    {
+      "id": "9d57",
+      "title": "Array - Every",
+      "content": "La méthode every() permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test."
+    },
+    {
+      "id": "9483",
+      "title": "Array - Includes",
+      "content": "La méthode includes() permet de déterminer si un tableau contient une valeur et renvoie true si c'est le cas, false sinon."
+    },
+    {
+      "id": "df6e",
+      "title": "String - IndexOf",
+      "content": "La méthode indexOf() renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante (à partir de indexDébut). Elle renvoie -1 si la valeur cherchée n'est pas trouvée"
+    },
+    {
+      "id": "a523",
+      "title": "String - Repeat",
+      "content": "La méthode repeat() construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres."
+    }
+  ]
 }
