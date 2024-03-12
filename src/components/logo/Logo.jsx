@@ -1,7 +1,7 @@
 import s from './style.module.scss';
 import image from '../../assets/images/logo.png';
 
-export function Logo({ title, subtitle, onClick }) {
+export const Logo = ({ title, subtitle, onClick }) => {
     return (
         <>
             <div className={s.container} onClick={onClick}>
@@ -15,4 +15,4 @@ export function Logo({ title, subtitle, onClick }) {
             <p className={s.subtitle}>{subtitle}</p>
         </>
     );
-}
+};

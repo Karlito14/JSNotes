@@ -102,7 +102,7 @@ export const NoteForm = ({isEditable = true, title, onClickSubmit, onClickEdit, 
             </div>
             <form id='form' className={style.section__form}>
                 {isEditable && titleInput}
-                {isEditable ? contentInput : <p>{note.content}</p>}
+                {isEditable ? contentInput : <p className={style.paragraphe}>{note.content}</p>}
                 {isEditable && submitButton}
             </form>   
         </section>

@@ -1,7 +1,7 @@
 .container {
     cursor: pointer;
     padding: 20px;
-    background-color: white;
+    background-color: #474747;
     border-radius: 10px;
     transition: all 0.4s;
     width: 300px;
@@ -14,7 +14,7 @@
     }
 
     &:hover &__row__title {
-        color: #fce100;
+        color: darken(#fce100, 8%);
     }
 
     &:hover &__row__icon {
@@ -36,11 +36,12 @@
             margin-bottom: 0;
             margin-right: 15px;
             font-size: 24px;
+            color: #fce100;
         }
 
         &__icon {
             transition: all 0.4s;
-            color: #b8b8b8;
+            color: #E0E0E0;
             opacity: 0;
 
             &:hover {
@@ -62,5 +63,6 @@
         -webkit-line-clamp: 6;
         display: -webkit-box;
         -webkit-box-orient: vertical;
+        color: white;
     }
 }
