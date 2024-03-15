@@ -6,7 +6,7 @@ export class ValidityForm {
         if(!errorSpan) {
             errorSpan = document.createElement('span');
             errorSpan.setAttribute('id', `error-${input.id}`);
-            errorSpan.style.color = '#dc3545';
+            errorSpan.style.color = 'red';
             errorSpan.style.marginTop = '10px';
         }
 

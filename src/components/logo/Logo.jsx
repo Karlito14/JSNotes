@@ -16,3 +16,4 @@ export const Logo = ({ title, subtitle, onClick }) => {
         </>
     );
 };
+
